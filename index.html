@@ -699,49 +699,49 @@
     </div>
 
     <script>
-        // Dados dos produtos
+        // Dados dos produtos com imagens corrigidas
         const products = [
             {
                 id: 1,
                 name: "PlayStation 5",
                 description: "Console de última geração com SSD ultrarrápido e compatibilidade retroativa.",
                 price: 4299.99,
-                image: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                image: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 id: 2,
                 name: "Xbox Series X",
                 description: "Console mais poderoso da Microsoft com 12 TFLOPS de poder de processamento.",
                 price: 4199.99,
-                image: "https://images.unsplash.com/photo-1621259182978-fbf51e9c641c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                image: "https://images.unsplash.com/photo-1621259182978-fbf51e9c641c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 id: 3,
                 name: "Nintendo Switch OLED",
                 description: "Console híbrido com tela OLED de 7 polegadas e som aprimorado.",
                 price: 2899.99,
-                image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 id: 4,
                 name: "Controle DualSense PS5",
                 description: "Controle sem fio com feedback tátil e gatilhos adaptáveis.",
                 price: 499.99,
-                image: "https://images.unsplash.com/photo-1621259181239-5b4565b8d793?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                image: "https://images.unsplash.com/photo-1621259181239-5b4565b8d793?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 id: 5,
                 name: "God of War Ragnarök",
                 description: "A tão aguardada sequência da jornada de Kratos e Atreus.",
                 price: 299.99,
-                image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
             },
             {
                 id: 6,
                 name: "The Legend of Zelda: Tears of the Kingdom",
                 description: "Aventura épica de Link em Hyrule com novas habilidades.",
                 price: 349.99,
-                image: "https://images.unsplash.com/photo-1618331833071-1c0c6ee3d19e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
             }
         ];
 
@@ -786,7 +786,7 @@
                 productCard.className = 'product-card';
                 
                 productCard.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product-img">
+                    <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
                     <div class="product-info">
                         <h3 class="product-title">${product.name}</h3>
                         <p class="product-description">${product.description}</p>
@@ -894,7 +894,7 @@
                 cartItem.className = 'cart-item';
                 
                 cartItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
                     <div class="cart-item-info">
                         <h4 class="cart-item-title">${item.name}</h4>
                         <p class="cart-item-price">R$ ${item.price.toFixed(2)} × ${item.quantity}</p>
